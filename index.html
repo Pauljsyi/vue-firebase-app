@@ -4,7 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+
     <title>Vue + Firebase App</title>
   </head>
-  <body></body>
+  <style></style>
+  <body>
+    <h1>Hello</h1>
+    <div id="app">
+      <div v-show="show">
+        <p>{{title}} -- {{author}} -- {{age}}</p>
+        <!-- v-on is a directive that react to events -->
+        <button @click="incrementAge()">Increase Age</button>
+        <button @click="decrementAge()">Decrease Age</button>
+        <button @click="changeTitle('Hallelujah')">Change Title</button>
+      </div>
+
+      <button @click="toggleShow()">{{showOrHide}} Books</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
