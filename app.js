@@ -15,6 +15,8 @@ const app = Vue.createApp({
       title: "the final episode",
       author: "adam",
       age: 22,
+      x: 0,
+      y: 0,
     };
   },
   methods: {
@@ -32,6 +34,16 @@ const app = Vue.createApp({
       this.show !== true
         ? (this.showOrHide = "show")
         : (this.showOrHide = "hide");
+    },
+    handleEvent(e, data) {
+      console.log(e);
+      if (data) {
+        console.log(data);
+      }
+    },
+    handleMouseMove(e) {
+      this.x = e.offsetX;
+      this.y = e.offsetY;
     },
   },
 });
