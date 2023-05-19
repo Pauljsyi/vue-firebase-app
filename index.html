@@ -21,12 +21,20 @@
   <body>
     <h1>Hello</h1>
     <div id="app">
+      <a v-bind:ahref="url">paul's website</a>
       <div v-show="show">
-        <p>{{title}} -- {{author}} -- {{age}}</p>
+        <ul>
+          <li v-for="book in books" :class="{fav: book.isFav}">
+            <img :src="book.img" :alt="book.title" />
+            <h3>{{book.title}}</h3>
+            <p>{{book.author}}</p>
+          </li>
+        </ul>
+        <!-- <p>{{title}} -- {{author}} -- {{age}}</p> -->
         <!-- v-on is a directive that react to events -->
         <button @click="incrementAge()">Increase Age</button>
         <button @click="decrementAge()">Decrease Age</button>
-        <button @click="changeTitle('Hallelujah')">Change Title</button>
+        <!-- <button @click="changeTitle('Hallelujah')">Change Title</button> -->
       </div>
       <button @click="toggleShow()">{{showOrHide}} Books</button>
       <div>

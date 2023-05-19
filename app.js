@@ -10,6 +10,27 @@ const app = Vue.createApp({
   // to react to an event
   data() {
     return {
+      url: "http://www.pauljsyi.com",
+      books: [
+        {
+          title: "name of the wind",
+          author: "patrick rothfuss",
+          img: "assets/1.jpg",
+          isFav: true,
+        },
+        {
+          title: "the way of kings",
+          author: "brandon sanderson",
+          img: "assets/2.jpg",
+          isFav: false,
+        },
+        {
+          title: "the final empire",
+          author: "brandon sanderson",
+          img: "assets/3.jpg",
+          isFav: true,
+        },
+      ],
       showOrHide: "show",
       show: true,
       title: "the final episode",
